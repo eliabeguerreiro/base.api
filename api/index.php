@@ -13,7 +13,6 @@ if(isset($_GET['option'])){
         case 'status':
             api_status($data);
             break;
-
     }
 }
 
