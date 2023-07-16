@@ -9,9 +9,10 @@ $resultado = api_request('random&min=10&max=100');
 if($resultado['status'] == 'ERROR'){
     die('algo de errado não está certo!');
 }
-
 echo'<pre>';
-print_r($resultado);
+print_r(api_request('status'));
+
+
 //var_dump($resultado);
 function api_request($option)
 {
