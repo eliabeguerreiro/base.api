@@ -1,8 +1,8 @@
 <?php
-define('API_BASE', 'http://localhost/api_base/api/?option=');
+define('API_BASE', 'http://localhost/base.api/api/?option=');
 echo '<p>APLICAÇÃO</p>';
 
-$resultado = api_request('random');
+$resultado = api_request('random&min=10&max=100');
 
 //verificação (sucess)
 
@@ -12,8 +12,7 @@ if($resultado['status'] == 'ERROR'){
 
 echo'<pre>';
 print_r($resultado);
-
-
+//var_dump($resultado);
 function api_request($option)
 {
 
